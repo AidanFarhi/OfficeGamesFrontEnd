@@ -1,1 +1,13 @@
+body {
+    margin: 0;
+}
 
+#app-main-div {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10vh 1fr 10vh;
+}
+
+table {
+    width: 100%;
+}
