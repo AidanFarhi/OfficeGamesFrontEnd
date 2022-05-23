@@ -8,5 +8,5 @@ body {
 #app-main-div {
     height: 100vh;
     display: grid;
-    grid-template-rows: 8vh 6vh 1fr 8vh;
+    grid-template-rows: 8vh 6vh 1fr 10vh;
 }

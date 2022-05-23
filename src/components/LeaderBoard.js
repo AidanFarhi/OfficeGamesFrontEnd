@@ -11,29 +11,33 @@ export default function LeaderBoard() {
                         <th>L</th>
                         <th>PF</th>
                         <th>PA</th>
+                        <th>WP</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th>Aidan</th>
-                        <th>7</th>
-                        <th>3</th>
-                        <th>521</th>
-                        <th>412</th>
+                        <td>Aidan</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>521</td>
+                        <td>412</td>
+                        <td>83%</td>
                     </tr>
                     <tr>
-                        <th>Kevin</th>
-                        <th>3</th>
-                        <th>7</th>
-                        <th>412</th>
-                        <th>698</th>
+                        <td>Kevin</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>412</td>
+                        <td>698</td>
+                        <td>72%</td>
                     </tr>
                     <tr>
-                        <th>Atharva</th>
-                        <th>2</th>
-                        <th>12</th>
-                        <th>345</th>
-                        <th>546</th>
+                        <td>Atdarva</td>
+                        <td>2</td>
+                        <td>12</td>
+                        <td>345</td>
+                        <td>546</td>
+                        <td>26%</td>
                     </tr>
                 </tbody>
             </table>
