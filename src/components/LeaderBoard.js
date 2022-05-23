@@ -1,3 +1,4 @@
+import '../styles/LeaderBoard.css'
 
 export default function LeaderBoard() {
     return (
@@ -5,7 +6,6 @@ export default function LeaderBoard() {
             <table>
                 <thead>
                     <tr>
-                        <th>#</th>
                         <th>Pl</th>
                         <th>W</th>
                         <th>L</th>
@@ -15,7 +15,6 @@ export default function LeaderBoard() {
                 </thead>
                 <tbody>
                     <tr>
-                        <th>1</th>
                         <th>Aidan</th>
                         <th>7</th>
                         <th>3</th>
@@ -23,7 +22,6 @@ export default function LeaderBoard() {
                         <th>412</th>
                     </tr>
                     <tr>
-                        <th>2</th>
                         <th>Kevin</th>
                         <th>3</th>
                         <th>7</th>
@@ -31,7 +29,6 @@ export default function LeaderBoard() {
                         <th>698</th>
                     </tr>
                     <tr>
-                        <th>3</th>
                         <th>Atharva</th>
                         <th>2</th>
                         <th>12</th>

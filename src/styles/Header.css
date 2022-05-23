@@ -1,0 +1,15 @@
+#header-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#main-header {
+    margin: 0;
+    margin-left: 5px;
+}
+
+#login-link {
+    margin-right: 10px;
+}
