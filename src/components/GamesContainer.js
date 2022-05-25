@@ -16,7 +16,6 @@ export default function GamesContainer() {
     useEffect(() => {
         async function fetchData() {
             const arrayOfGameObjects = await fetchGamesFromApi()
-            console.log(arrayOfGameObjects)
             const arrayOfGameComponents = generateGameComponents(arrayOfGameObjects)
             setGames(arrayOfGameComponents)
         }

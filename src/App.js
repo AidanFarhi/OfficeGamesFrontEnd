@@ -6,7 +6,7 @@ import Header from './components/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer';
 import Login from './components/Login';
-import NewGame from './components/NewGame';
+import NewGameForm from './components/NewGameForm';
 
 function App() {
   return (
@@ -16,9 +16,9 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<LeaderBoard />} />
-            <Route path="/ping-pong" element={<GamesContainer />} />
+            <Route path="/my-games" element={<GamesContainer />} />
             <Route path="/login" element={<Login />}/>
-            <Route path="/new-game" element={<NewGame />} />
+            <Route path="/new-game" element={<NewGameForm />} />
           </Routes>
           <Footer />
         </BrowserRouter>

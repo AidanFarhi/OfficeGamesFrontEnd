@@ -9,19 +9,19 @@ export default function Navbar() {
                 to='/'
                 style={({ isActive }) => {
                     return {
-                        color: isActive ? "white" : "",
+                        borderColor: isActive ? "white" : "",
                     }
                 }}>
                 Leaderboard
             </NavLink>
             <NavLink 
-                to='/ping-pong'
+                to='/my-games'
                 style={({ isActive }) => {
                     return {
-                        color: isActive ? "white" : "",
+                        borderColor: isActive ? "white" : "",
                     }
                 }}>
-                Ping Pong
+                My Games
             </NavLink>
         </nav>
     )

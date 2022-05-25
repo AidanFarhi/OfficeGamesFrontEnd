@@ -1,8 +1,49 @@
 import '../styles/LeaderBoard.css'
+import { useEffect, useState } from 'react'
+import LoadingAnimation from './LoadingAnimation'
 
 export default function LeaderBoard() {
+
+    const [leaderBoardItems, setLeaderBoardItems] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    const createTableRows = data => {
+        return data.map((item, i) => {
+            return (
+                <tr key={i}>
+                    <td>{item.playerName}</td>
+                    <td>{item.wins}</td>
+                    <td>{item.losses}</td>
+                    <td>{item.pointsFor}</td>
+                    <td>{item.pointsAgainst}</td>
+                    <td>{item.winPercentage}%</td>
+                </tr>
+            )
+        })
+    }
+
+    const fetchLeaderBoardItems = async () => {
+        const response = await fetch('api/v1/leaderboard/latest')
+        const data = await response.json()
+        return data
+    } 
+
+    useEffect(() => {
+        const getData = async () => {
+            const data = await fetchLeaderBoardItems()
+            const items = createTableRows(data)
+            setLeaderBoardItems(items)
+            setLoading(false)
+        }
+        getData()
+    }, [])
+
     return (
         <div id='leaderboard-div'>
+            {loading 
+            ? 
+            <LoadingAnimation /> 
+            :
             <table>
                 <thead>
                     <tr>
@@ -15,32 +56,10 @@ export default function LeaderBoard() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Aidan</td>
-                        <td>7</td>
-                        <td>3</td>
-                        <td>521</td>
-                        <td>412</td>
-                        <td>83%</td>
-                    </tr>
-                    <tr>
-                        <td>Kevin</td>
-                        <td>3</td>
-                        <td>7</td>
-                        <td>412</td>
-                        <td>698</td>
-                        <td>72%</td>
-                    </tr>
-                    <tr>
-                        <td>Atdarva</td>
-                        <td>2</td>
-                        <td>12</td>
-                        <td>345</td>
-                        <td>546</td>
-                        <td>26%</td>
-                    </tr>
+                    {leaderBoardItems}
                 </tbody>
             </table>
+            }
         </div>
     )
 }
