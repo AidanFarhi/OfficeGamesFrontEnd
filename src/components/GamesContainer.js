@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import OfficeGame from "./OfficeGame";
+import "../styles/GamesContainer.css"
 
 export default function GamesContainer() {
 
@@ -23,7 +24,7 @@ export default function GamesContainer() {
     }, [])
     
     return (
-        <div>
+        <div id='games-container'>
             <p>Games for player id: 1</p>
             {games}
         </div>

@@ -12,8 +12,14 @@ tr:hover {
     background-color: rgb(42, 42, 42);
 }
 
+th {
+    font-size: 18px;
+}
+
 td {
     color: rgb(197, 197, 197);
     text-align: center;
     vertical-align: middle;
+    font-size: 18px;
+    padding: 5px;
 }
