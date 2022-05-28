@@ -12,6 +12,7 @@ export default function LeaderBoard() {
             return (
                 <tr key={i}>
                     <td>{item.playerName}</td>
+                    <td>{item.gamesPlayed}</td>
                     <td>{item.wins}</td>
                     <td>{item.losses}</td>
                     <td>{item.pointsFor}</td>
@@ -48,6 +49,7 @@ export default function LeaderBoard() {
                 <thead>
                     <tr>
                         <th>Pl</th>
+                        <th>G</th>
                         <th>W</th>
                         <th>L</th>
                         <th>PF</th>

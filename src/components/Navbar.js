@@ -9,7 +9,8 @@ export default function Navbar() {
                 to='/'
                 style={({ isActive }) => {
                     return {
-                        borderColor: isActive ? "white" : "",
+                        color: isActive ? "white" : "",
+                        borderBottom: isActive ? "1px solid white" : ""
                     }
                 }}>
                 Leaderboard
@@ -18,7 +19,8 @@ export default function Navbar() {
                 to='/my-games'
                 style={({ isActive }) => {
                     return {
-                        borderColor: isActive ? "white" : "",
+                        color: isActive ? "white" : "",
+                        borderBottom: isActive ? "1px solid white" : ""
                     }
                 }}>
                 My Games
