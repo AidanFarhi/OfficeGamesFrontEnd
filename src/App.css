@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: black;
+    background-color: rgb(20, 20, 20);
     color: azure;
     font-family: "Roboto";
 }
@@ -8,5 +8,5 @@ body {
 #app-main-div {
     height: 100vh;
     display: grid;
-    grid-template-rows: 8vh 7vh 1fr 10vh;
+    grid-template-rows: 8vh 7vh 1fr 8vh;
 }

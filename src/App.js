@@ -7,17 +7,40 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer';
 import Login from './components/Login';
 import NewGameForm from './components/NewGameForm';
+import {useEffect, useState } from 'react'
+import Cookies from "js-cookie"
 
 function App() {
+
+  const [username, setUsername] = useState('')
+  const [loggedIn, setLoggedIn] = useState(false)
+
+  const logout = () => {
+    Cookies.remove("username")
+    Cookies.remove("userId")
+    Cookies.remove("loggedIn")
+    setUsername('')
+  }
+
+  const login = () => {
+    setLoggedIn(true)
+  }
+
+  useEffect(() => {
+    if (Cookies.get("loggedIn") === "true") {
+      setUsername(Cookies.get("username"))
+    }
+  }, [loggedIn])
+
   return (
       <div id='app-main-div'>
         <BrowserRouter>
-          <Header />
+          <Header username={username} logoutFunction={logout}/>
           <Navbar />
           <Routes>
             <Route path="/" element={<LeaderBoard />} />
             <Route path="/my-games" element={<GamesContainer />} />
-            <Route path="/login" element={<Login />}/>
+            <Route path="/login" element={<Login loginFunction={login}/>}/>
             <Route path="/new-game" element={<NewGameForm />} />
           </Routes>
           <Footer />

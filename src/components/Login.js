@@ -4,11 +4,13 @@ import { useState } from "react";
 import "../styles/Login.css"
 import Cookies from "js-cookie"
 
-export default function Login() {
+export default function Login(props) {
     
     const [username, setUsername] = useState('')
     const [loggedIn, setLoggedIn] = useState(false)
     const [showLoginError, setShowLoginError] = useState(false)
+
+    const login = props.loginFunction
 
     const handleUsername = e => { setUsername(e.target.value) }
 
@@ -17,6 +19,8 @@ export default function Login() {
             setLoggedIn(true)
             Cookies.set("loggedIn", "true")
             Cookies.set("userId", parseInt(result))
+            Cookies.set("username", username)
+            login()
         } else {
             setLoggedIn(false)
             setShowLoginError(true)
