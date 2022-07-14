@@ -22,6 +22,21 @@ export default function Header(props) {
                 ""
             }
             {
+                username !== "" ?
+                <NavLink 
+                    id='messaged-link' 
+                    to='/messages'
+                    style={({ isActive }) => {
+                        return {
+                            borderColor: isActive ? "white" : "",
+                        }
+                    }}>
+                    Messages
+                </NavLink>
+                :
+                ""
+            }
+            {
                 username === "" ?
                 <NavLink 
                     id='login-link' 
@@ -41,7 +56,6 @@ export default function Header(props) {
                 // </NavLink>
                 <button onClick={logout}>Logout</button>
             }
-            
         </div>
     )
 }

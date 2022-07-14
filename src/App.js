@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer';
 import Login from './components/Login';
 import NewGameForm from './components/NewGameForm';
+import Messages from './components/Messages';
 import {useEffect, useState } from 'react'
 import Cookies from "js-cookie"
 
@@ -42,6 +43,7 @@ function App() {
             <Route path="/my-games" element={<GamesContainer />} />
             <Route path="/login" element={<Login loginFunction={login}/>}/>
             <Route path="/new-game" element={<NewGameForm />} />
+            <Route path="/messages" element={<Messages />} />
           </Routes>
           <Footer />
         </BrowserRouter>

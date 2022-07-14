@@ -21,8 +21,10 @@ export default function NewGameForm() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
         }
-        const response = await fetch('api/v1/office-games/new-game', requestOptions)
+        const response = await fetch('api/v1/game-message/send-game-message', requestOptions)
         const status = response.status
+        const data = await response.json()
+        console.log(data)
         console.log(status)
     }
 
