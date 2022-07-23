@@ -4,7 +4,7 @@ import "../styles/Header.css"
 
 export default function Header(props) {
 
-    const [username, setUsername] = useState('')
+    const [username, setUsername] = useState(props.username)
 
     const logout = props.logoutFunction
 
@@ -14,7 +14,7 @@ export default function Header(props) {
 
     return (
         <div id='header-div'>
-            <h4 id='main-header'>Office Games</h4>
+            <img id="ping-pong-icon" src="images/pingpong2.png" alt="A ping pong icon" />
             {
                 username !== "" ?
                 <p id='username-display'>{username}</p>
@@ -23,38 +23,21 @@ export default function Header(props) {
             }
             {
                 username !== "" ?
-                <NavLink 
-                    id='messaged-link' 
-                    to='/messages'
-                    style={({ isActive }) => {
-                        return {
-                            borderColor: isActive ? "white" : "",
-                        }
-                    }}>
-                    Messages
-                </NavLink>
+                    <NavLink id='messaged-link' to='/messages'>
+                        <img id="message-icon" src="images/message.png" alt="A message icon" />
+                    </NavLink>
                 :
                 ""
             }
             {
                 username === "" ?
-                <NavLink 
-                    id='login-link' 
-                    to='/login'
-                    style={({ isActive }) => {
-                        return {
-                            borderColor: isActive ? "white" : "",
-                        }
-                    }}>
-                    Login
+                <NavLink id='login-link' to='/login'>
+                    <img id="login-icon" src="images/login.png" alt="A login icon" />
                 </NavLink>
                 :
-                // <NavLink 
-                //     id='login-link'
-                //     to='/'>
-                //     Logout
-                // </NavLink>
-                <button onClick={logout}>Logout</button>
+                <button id='logout-button' onClick={logout}>
+                    <img id="logout-icon" src="images/logout.png" alt="A logout icon" />
+                </button>
             }
         </div>
     )

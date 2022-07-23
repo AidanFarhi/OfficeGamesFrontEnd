@@ -7,23 +7,28 @@
     background-color: rgb(5, 5, 5);
 }
 
-#main-header {
-    margin: 0;
-    margin-left: 5px;
+#ping-pong-icon {
+    height: 30px;
+    width: 30px;
+    margin-left: 15px;
 }
 
 #username-display {
     justify-self: right;
-    color: rgb(173, 173, 173);
+    color: rgb(232, 232, 232);
 }
 
 #login-link {
+    margin-right: 15px;
+}
+
+#message-icon, #login-icon, #logout-icon {
+    height: 26px;
+    width: 26px;
+}
+
+#logout-button {
     margin-right: 10px;
-    font-size: 14px;
-    background-color: rgb(32, 140, 255);
-    color: rgb(215, 215, 215);
-    padding: 5px;
-    border: 1px solid rgb(32, 140, 255);
-    border-radius: 10px;
-    text-decoration: none;
+    background-color: transparent;
+    border: none;
 }

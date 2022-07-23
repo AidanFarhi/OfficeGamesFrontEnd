@@ -21,6 +21,7 @@ function App() {
     Cookies.remove("userId")
     Cookies.remove("loggedIn")
     setUsername('')
+    setLoggedIn(false)
   }
 
   const login = () => {
