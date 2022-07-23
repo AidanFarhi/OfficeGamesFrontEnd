@@ -2,6 +2,10 @@
     background-color: rgb(20, 20, 20);
 }
 
+#leaderboard-loading-div {
+    text-align: center;
+}
+
 table {
     width: 100%;
     margin-top: 10px;

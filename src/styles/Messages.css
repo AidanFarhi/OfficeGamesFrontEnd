@@ -1,0 +1,9 @@
+#game-messages-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#game-messages-loading-div {
+    text-align: center;
+}

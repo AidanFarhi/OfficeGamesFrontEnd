@@ -1,3 +1,4 @@
 #games-container {
+    text-align: center;
     overflow-y: scroll;
 }

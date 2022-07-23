@@ -43,7 +43,10 @@ export default function LeaderBoard() {
         <div id='leaderboard-div'>
             {loading 
             ? 
-            <LoadingAnimation /> 
+            <div id='leaderboard-loading-div'>
+                <p>Getting leaderboard...</p>
+                <LoadingAnimation /> 
+            </div>
             :
             <table>
                 <thead>
